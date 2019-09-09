@@ -1,0 +1,20 @@
+Ideias principais do protótipo:
+Baseado nas sugestões da biblioteca face_recognition, realizei um simples faceMatch para validar a ideia de reconhecimento e identificação facial. A tarefa de atribuir correlação entre dono da face requer uma refinada aritmética de pontos faciais. A grande questão é como estes pontos são captados para ser traçado o perfil de uma pessoa. 
+Fatores como tempo, iluminação, qualidade da imagem, câmera, são desafiadores. Fazer um código robusto que tolere falhas requer estudo de bibliotecas de processamento de imagem, leituras de artigos e muitos testes.
+Um dos maiores desafios que encontrei nesta tarefa foi o curto prazo para poder desenvolver e treinar um modelo computacional que extraísse de uma série de fotos as features necessárias para sua utilização do reconhecimento facial. Devido ao prazo, recorri a ferramentas e API’s já existentes, de código aberto, para poder tentar ter um resultado rápido.
+
+Existem diversas maneiras de faceMatching, entretanto por já ter participado como voluntário em um projeto de detecção facial,  decidi ir pela linhagem que mais se assemelha ao que eu já tive contato. Ainda que pequeno o contato com a arte de faceMatch, ao realizar leituras podemos dizer que existe uma técnica de reconhecimento para cada situação. Isto é, escolher a técnica de reconhecimento facial depende: do cenário, dos casos de uso e especificações. Para endossar minha escolha, trago como referência o artigo “A Survey of Face Recognition Techiniques” de Jafari e Arabina. Esse artigo tem diversas citações e explica os principais tipos de faceMatching. 
+
+O planejado para este protótipo trata-se de utilizar uma API que mapea faces em 3 dimensões e nos retorna os landmarks principais da face. Devido a maior quantidade de pontos, as heurísticas faciais ficam mais fáceis de ser traçadas. Com esses dados podemos facilmente treinar um modelo mais preciso de acordo com as características extraídas. Vale ressaltar que se for necessário uma solução de processamento mais rápido, este mapeamento 3D não é indicado.  Esse é um forte ponto negativo da solução, pois para gerar os landMarks requer um certo gasto computacional.
+Para treinar os modelos,  pensei em utilizar o mesmo algoritmo que a biblioteca dliv utilizou. Entretanto se o código for para um fim específico que requer sigilo pode ser modelado de outra forma. Esta biblioteca já tem um shape_predictor que é bastante fiel a uma detecção, porém se desejamos alcançar um nível mais alto de porcentagem nos matchs faciais um modelo alternativo deve ser treinado para a construção de um novo ‘.dat’.
+
+
+Referências:
+Artigo: 
+“A Survey of Face Recognition Techiniques”. Jafari, Rabia;  Hamid R., Arabina, 2009 (p. 13).
+
+API’s e bibliotecas:
+https://github.com/YadiraF/PRNet
+https://pypi.org/project/face_recognition/
+http://dlib.net/train_shape_predictor.py.html
+https://medium.com/datadriveninvestor/training-alternative-dlib-shape-predictor-models-using-python-d1d8f8bd9f5c
