@@ -6,11 +6,11 @@ dlib library installed for python
 opencv > v.4 installed and configured for pyton
 
 any doubts: hugoziviani@gmail.com
-\n
-to run this model:\n
-1- clone the repository:\n
-  https://github.com/hugoziviani/simpleFaceMatch\n
-2- type:\n
-  python faceMatch.py (to see the firs simple face match)\n
-  python match2.py (to see a little smartnes face match)\n
+
+to run this model:
+1- clone the repository:
+  https://github.com/hugoziviani/simpleFaceMatch
+2- type:
+  python faceMatch.py (to see the firs simple face match)
+  python match2.py (to see a little smartnes face match)
 
